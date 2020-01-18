@@ -12,7 +12,7 @@ public class main {
 
         String[][] iskambil = new String[4][13];
         desteOlustur(iskambil);
-        desteShuffle(iskambil);
+        desteKaristir(iskambil);
         desteGoster(iskambil);
         System.out.println("*************");
         desteDagit(iskambil);
@@ -27,19 +27,19 @@ public class main {
         for (int i = 0; i < iskambil.length; i++) {
             for (int j = 0; j < iskambil[i].length; j++) {
                 if (i == 0) {
-                    desteFill(iskambil, "Karo", i, j);
+                    desteDoldur(iskambil, "Karo", i, j);
                 } else if (i == 1) {
-                    desteFill(iskambil, "Kupa", i, j);
+                    desteDoldur(iskambil, "Kupa", i, j);
                 } else if (i == 2) {
-                    desteFill(iskambil, "Sinek", i, j);
+                    desteDoldur(iskambil, "Sinek", i, j);
                 } else if (i == 3) {
-                    desteFill(iskambil, "Maça", i, j);
+                    desteDoldur(iskambil, "Maça", i, j);
                 }
             }
         }
     }
 
-    public static void desteFill(String[][] iskambil, String text, int i, int j) {
+    public static void desteDoldur(String[][] iskambil, String text, int i, int j) {
         // Bu metod if döngüsü desteOlustur metodunun içinde 4 defa tekrar edeceği için metod haline getirilmiştir.
         if (j == 0) {
             iskambil[i][j] = text + " As";
@@ -60,7 +60,7 @@ public class main {
         }
     }
 
-    public static void desteShuffle(String[][] deste) {
+    public static void desteKaristir(String[][] deste) {
 
         int toplamEleman = 52;
 
